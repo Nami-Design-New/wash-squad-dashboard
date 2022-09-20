@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="ar" style="direction: rtl;">
+
+<head>
+    <meta charset="utf-8" />
+    <title> WashSquad </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- jvectormap -->
+    <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/core/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/daygrid/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/bootstrap/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/timegrid/main.min.css" type="text/css">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-sidebar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <!-- ==========  Header  ========== -->
+        <section id="MainHeader"></section>
+        <!-- ==========  Sidebar  ========== -->
+        <section id="MainSidebar"></section>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content ">
+            <div class="page-content orders-table operation">
+                <div class="container-fluid">
+                    <!-- modal -->
+                    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog"
+                        aria-labelledby="orderModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <h3 style="color: #7D349D  ; text-align: center;">توزيع الطلبات اليومية </h3>
+                                    <div class="mod-content d-block mt-3">
+                                        <form action="">
+                                            <div class="row pt-3">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> إختر اليوم
+                                                        </label>
+                                                        <input class="form-control" type="date" id="default-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 p-2">
+                                                    <p class="form-label"> مواقع التغطية </p>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <p class="form-label"> عدد السيارات</p>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <p class="form-label"> اختر السائق </p>
+                                                </div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4 p-2">
+                                                    <div
+                                                        class="d-flex p-1 px-3 justify-content-between align-items-center mo-form-select">
+                                                        <p class="mb-0"> وسط الرياض </p>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexSwitchCheckDefault">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input class="count" type="text" value="1" />
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <div class="times  p-0">
+                                                        <!-- driver -->
+                                                        <div id="driver" class="driver days flex-wrap m-0">
+                                                            <select class="form-select">
+                                                                <option selected> 94849 </option>
+                                                                <option value="1"> 52166 </option>
+                                                                <option value="2"> 8497 </option>
+                                                            </select>
+                                                            <div id="addDriver" class="add">
+                                                                <i class="fas fa-plus-circle"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4 p-2">
+                                                    <div
+                                                        class="d-flex p-1 px-3 justify-content-between align-items-center mo-form-select">
+                                                        <p class="mb-0"> وسط الرياض </p>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexSwitchCheckDefault">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input class="count" type="text" value="1" />
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <div class="times  p-0">
+                                                        <!-- driver -->
+                                                        <div id="driver" class="driver days flex-wrap m-0">
+                                                            <select class="form-select">
+                                                                <option selected> 94849 </option>
+                                                                <option value="1"> 52166 </option>
+                                                                <option value="2"> 8497 </option>
+                                                            </select>
+                                                            <div id="addDriver" class="add">
+                                                                <i class="fas fa-plus-circle"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4 p-2">
+                                                    <div
+                                                        class="d-flex p-1 px-3 justify-content-between align-items-center mo-form-select">
+                                                        <p class="mb-0"> وسط الرياض </p>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexSwitchCheckDefault">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input class="count" type="text" value="1" />
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <div class="times  p-0">
+                                                        <!-- driver -->
+                                                        <div id="driver" class="driver days flex-wrap m-0">
+                                                            <select class="form-select">
+                                                                <option selected> 94849 </option>
+                                                                <option value="1"> 52166 </option>
+                                                                <option value="2"> 8497 </option>
+                                                            </select>
+                                                            <div id="addDriver" class="add">
+                                                                <i class="fas fa-plus-circle"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4 p-2">
+                                                    <div
+                                                        class="d-flex p-1 px-3 justify-content-between align-items-center mo-form-select">
+                                                        <p class="mb-0"> وسط الرياض </p>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexSwitchCheckDefault">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input class="count" type="text" value="1" />
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <div class="times  p-0">
+                                                        <!-- driver -->
+                                                        <div id="driver" class="driver days flex-wrap m-0">
+                                                            <select class="form-select">
+                                                                <option selected> 94849 </option>
+                                                                <option value="1"> 52166 </option>
+                                                                <option value="2"> 8497 </option>
+                                                            </select>
+                                                            <div id="addDriver" class="add">
+                                                                <i class="fas fa-plus-circle"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4 p-2">
+                                                    <div
+                                                        class="d-flex p-1 px-3 justify-content-between align-items-center mo-form-select">
+                                                        <p class="mb-0"> وسط الرياض </p>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexSwitchCheckDefault">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 p-2">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input class="count" type="text" value="1" />
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 p-2">
+                                                    <div class="times  p-0">
+                                                        <!-- driver -->
+                                                        <div id="driver" class="driver days flex-wrap m-0">
+                                                            <select class="form-select">
+                                                                <option selected> 94849 </option>
+                                                                <option value="1"> 52166 </option>
+                                                                <option value="2"> 8497 </option>
+                                                            </select>
+                                                            <div id="addDriver" class="add">
+                                                                <i class="fas fa-plus-circle"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer ">
+                                    <div class="w-100 d-flex justify-content-end">
+                                        <button type="button" class="btn orangeBtn px-5 ">  حفظ </button>
+                                        <button type="button" class="btn mainBtn px-5  mx-2" data-bs-dismiss="modal">
+                                            إلغاء </button>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                    <!-- date -->
+                    <div class="d-flex flex-wrap justify-content-end mb-3">
+                        <div class="p-2 col-4">
+                            <input type="search" class="form-control searchInput"
+                                placeholder="phone number .. order number">
+                        </div>
+                        <div class=" p-1 p-xl-2">
+                            <select class="form-select shadow-lg">
+                                <option selected> January </option>
+                                <option value="1"> February </option>
+                                <option value="2"> March </option>
+                                <option value="3"> April </option>
+                            </select>
+                        </div>
+                        <div class=" p-1 p-xl-2">
+                            <select class="form-select shadow-lg">
+                                <option selected>2022</option>
+                                <option value="1">2021</option>
+                                <option value="2">2020</option>
+                                <option value="3">2019</option>
+                            </select>
+                        </div>
+                        <div class=" p-1 p-xl-2">
+                            <button class=" stoped  orangeBtn" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                توزيع الطلبات اليومية
+                                <i class="fas fa-plus ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- calender -->
+                    <div class="container">
+                        <div class="   hints d-flex align-items-center justify-content-end">
+                            <p class="px-2 py-1"> Gift <i class="gift fas fa-circle ps-1"></i> </p>
+                            <p class="px-2 py-1"> Monthly subscription <i class="month fas fa-circle ps-1"></i> </p>
+                            <p class="px-2 py-1"> Sterilization <i class="sterili fas fa-circle ps-1"></i> </p>
+                            <p class="px-2 py-1"> wash <i class="wash fas fa-circle ps-1"></i> </p>
+                            <p class="px-2 py-1"> polishing <i class="polish fas fa-circle ps-1"></i> </p>
+                        </div>
+                        <div class="calender ">
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                                class=" p-1 p-xl-2">
+                                <div class="day-div p-2">
+                                    <div class=" p-2 pb-4 ">1</div>
+                                    <div class="todo-func">
+                                        <span class="polish"> 12 p </span>
+                                        <span class="wash"> 13 w </span>
+                                        <span class="sterili"> 2 s </span>
+                                        <span class="month"> 1 m </span>
+                                        <span class="gift"> 3 g </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- table -->
+                    <div class="table-rep-plugin">
+                        <div class="table-responsive mb-0 rounded" data-pattern="priority-columns">
+                            <table id="datatable-buttons" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th> رقم الطلب </th>
+                                        <th> تاريخ الطلب </th>
+                                        <th> الوقت </th>
+                                        <th> المزود </th>
+                                        <th> العدد </th>
+                                        <th> نوع الخدمة </th>
+                                        <th> الباقة </th>
+                                        <th> خدمة إضافة </th>
+                                        <th> الحي </th>
+                                        <th> إسم العميل </th>
+                                        <th> رقم الجوال </th>
+                                        <th> الماركة </th>
+                                        <th> الإجمالي </th>
+                                        <th> السائق </th>
+                                        <th> الموقع </th>
+                                        <th> فاتورة </th>
+                                        <th> إعدادات </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="polish text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="wash text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="yelo text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="sterili text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="month text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="gift text-white">
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td>
+                                            <select class="form-select" name="" id="">
+                                                <option value="" selected disabled> إختر السائق </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                                <option value=""> محمد </option>
+                                            </select>
+                                        </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i>
+                                            </a> </td>
+                                        <td> <a> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td>
+                                            <i class="dripicons-information px-1"></i>
+                                            <i class="far fa-edit px-1" data-bs-toggle="modal"
+                                                data-bs-target="#editModal"></i>
+                                            <i class="far fa-trash-alt text-danger px-1"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="mod-content">
+                                        <form action="">
+                                            <div action="#" class="dropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file">
+                                                </div>
+                                                <div class="dz-message needsclick">
+                                                    <div class="">
+                                                        <i class="display-6 fas mo-icon fa-user"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> إسم العميل
+                                                        </label>
+                                                        <input class="form-control" type="text" id="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="">رقم الجوال</label>
+                                                        <input class="form-control" type="number" id=""
+                                                            placeholder="213243">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> الحي </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">الحي</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> تاريخ الطلب
+                                                        </label>
+                                                        <input class="form-control" type="date" id="" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> فترة الطلب
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value=""> 10:00 am </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> وسيلة الدفع
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">وسيلة الدفع</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> ماركة السيارة
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">دايو</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> الفئة </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">الفئة</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> نوع الخدمة
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">غسيل</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> عدد السيارات
+                                                        </label>
+                                                        <div class="number">
+                                                            <span class="minus">-</span>
+                                                            <input class="count" type="text" value="1" />
+                                                            <span class="plus">+</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for=""> التطبيق/المسوق
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value=""> ووش </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="">لوحة السيارة
+                                                        </label>
+                                                        <input class="form-control" type="text" id=""
+                                                            placeholder=" 0000-aaa ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="">الاجمالي
+                                                        </label>
+                                                        <input class="form-control" type="text" id="" placeholder="  ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label"> الخدمات الاضافية </label>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="service1">
+                                                        <label class="form-check-label" for="service1">
+                                                            تلميع مكينة
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="service2">
+                                                        <label class="form-check-label" for="service2">
+                                                            تلميع جنوط
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="service3">
+                                                        <label class="form-check-label" for="service3">
+                                                            تعطير السيارة
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="service4">
+                                                        <label class="form-check-label" for="service4">
+                                                            تلبيس الدعسات
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="service5">
+                                                        <label class="form-check-label" for="service5">
+                                                            تلميع كرسي أطفال
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="">ملاحظات
+                                                        </label>
+                                                        <textarea class="form-control" rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer ">
+                                    <div class="w-100 d-flex justify-content-end">
+                                        <button type="button" class="btn orangeBtn px-5 "> أضف </button>
+                                        <button type="button" class="btn mainBtn px-5  mx-2" data-bs-dismiss="modal">
+                                            إلغاء </button>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <!-- apexcharts js -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <!-- jquery.vectormap map -->
+        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <!-- dropzone js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+        <!-- plugin js -->
+        <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/jquery-ui-dist/jquery-ui.min.js"></script>
+        <script src="assets/libs/@fullcalendar/core/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/bootstrap/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/daygrid/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/timegrid/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/interaction/main.min.js"></script>
+        <!-- Calendar init -->
+        <script src="assets/js/pages/calendar.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script>
+            $('#MainHeader').load('header.html');
+            $('#MainSidebar').load('sidebar.html');
+        </script>
+        <script>
+            // add new select driver
+            $(document).ready(function () {
+                $('#addDriver').on('click', function () {
+                    var driverSelect = `   <select class="form-select">
+                                                <option selected> 94849 </option>
+                                                <option value="1"> 52166 </option>
+                                                <option value="2"> 8497 </option>
+                                            </select> ` ;
+                    $("#driver").prepend(driverSelect);
+                });
+            });
+        </script>
+</body>
+
+</html>

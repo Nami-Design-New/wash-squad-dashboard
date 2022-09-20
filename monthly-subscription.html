@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="ar" style="direction: rtl;">
+<head>
+    <meta charset="utf-8" />
+    <title> WashSquad </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- jvectormap -->
+    <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/core/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/daygrid/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/bootstrap/main.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/libs/@fullcalendar/timegrid/main.min.css" type="text/css">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-sidebar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <!-- ==========  Header  ========== -->
+        <section id="MainHeader"></section>
+        <!-- ==========  Sidebar  ========== -->
+        <section id="MainSidebar"></section>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content ">
+            <div class="page-content orders-table operation monthly-subscription">
+                <div class="container-fluid">
+                    <!-- modal -->
+                    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="mod-content">
+                                        <form action="">
+                                            <div action="#" class="dropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file">
+                                                </div>
+                                                <div class="dz-message needsclick">
+                                                    <div class="">
+                                                        <i class="display-6 fas mo-icon fa-user"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> إسم العميل
+                                                        </label>
+                                                        <input class="form-control" type="text" id="default-input"
+                                                            placeholder="بكري">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input">رقم الجوال</label>
+                                                        <input class="form-control" type="number" id="default-input"
+                                                            placeholder="213243">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> الحي </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">الحي</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> اليوم </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">اليوم</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> فترة الطلب </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value=""> 10:00 am</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> وسيلة الدفع</label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value=""> وسيلة الدفع </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> ماركة السيارة
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">دايو</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> الفئة </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">الفئة</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> نوع الباقة
+                                                        </label>
+                                                        <select class="form-select mo-form-select" name="" id="">
+                                                            <option value="">غسيل</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> لوحة السيارة </label>
+                                                        <input class="form-control" type="number" id="default-input"
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="default-input"> الاجمالي </label>
+                                                        <input class="form-control" type="number" id="default-input"
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer ">
+                                    <div class="w-100 d-flex justify-content-end">
+                                            <button type="button" class="btn orangeBtn px-5 "> أضف </button>
+                                            <button type="button" class="btn mainBtn px-5  mx-2" data-bs-dismiss="modal"> إلغاء </button>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                    <!-- date -->
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                        <div class="p-2">
+                            <button class="stoped" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">
+                                <i class="fas fa-plus me-2"></i>
+                                إضافة طلب
+                            </button>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-end align-items-center mb-3">
+                            <div class="p-2">
+                                <a href="daily_orders.html" class="btn stoped orangeBtn">
+                                    عدد الطلبات اليومية
+                                    <i class="fas fa-plus ms-2"></i>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <select class="form-select shadow-lg">
+                                    <option selected> January </option>
+                                    <option value="1"> February </option>
+                                    <option value="2"> March </option>
+                                    <option value="3"> April </option>
+                                </select>
+                            </div>
+                            <div class="p-2">
+                                <select class="form-select shadow-lg">
+                                    <option selected>2022</option>
+                                    <option value="1">2021</option>
+                                    <option value="2">2020</option>
+                                    <option value="3">2019</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  calender -->
+                    <div class="calender ">
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal"
+                            class=" p-1 p-xl-2">
+                            <div class="day-div p-2">
+                                <div class=" p-2 pb-4 d-flex justify-content-between align-items-center ">
+                                    <span> 1 </span>
+                                    <span class="ordersCount"> 19  </span>
+                                </div>
+                                <div class="todo-func ">
+                                    <span class="month"> 5 </span>
+                                    <p class="mb-0"> إشتراك </p>
+                                    <img src="assets/images/car.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- table -->
+                    <div class="table-rep-plugin">
+                        <div class="table-responsive mb-0 rounded bg-white" data-pattern="priority-columns">
+                            <table id="datatable" class="table dt-responsive table-striped nowrap">
+                                <thead>
+                                    <tr>
+                                        <th> رقم الطلب </th>
+                                        <th> تاريخ الطلب </th>
+                                        <th> الوقت </th>
+                                        <th> المزود </th>
+                                        <th> العدد </th>
+                                        <th> نوع الخدمة </th>
+                                        <th> الباقة </th>
+                                        <th> خدمة إضافة </th>
+                                        <th> الحي </th>
+                                        <th> إسم العميل </th>
+                                        <th> رقم الجوال </th>
+                                        <th> الماركة </th>
+                                        <th> الإجمالي </th>
+                                        <th> الموقع </th>
+                                        <th> فاتورة </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i> </a>
+                                        </td>
+                                        <td> <a href=""> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td> <a class="sub-details" href="" data-bs-toggle="modal"
+                                                data-bs-target="#subsc-detail"> تفاصيل الإشتراك </a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i> </a>
+                                        </td>
+                                        <td> <a href=""> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td> <a class="sub-details" href="" data-bs-toggle="modal"
+                                                data-bs-target="#subsc-detail"> تفاصيل الإشتراك </a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 10872 </td>
+                                        <td> 2021/07/13 </td>
+                                        <td> 06:00 </td>
+                                        <td> wash </td>
+                                        <td> 2 </td>
+                                        <td> غسيل </td>
+                                        <td> اشتراك </td>
+                                        <td> تلميع مكينة </td>
+                                        <td> الروضة </td>
+                                        <td> محمد </td>
+                                        <td> 0586877977 </td>
+                                        <td> مازدا </td>
+                                        <td> 250SR </td>
+                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                style="cursor: pointer;"> <i class="fas fa-map-marker-alt"></i> </a>
+                                        </td>
+                                        <td> <a href=""> <i class="fas fa-file-pdf"></i> </a> </td>
+                                        <td> <a class="sub-details" href="" data-bs-toggle="modal"
+                                                data-bs-target="#subsc-detail"> تفاصيل الإشتراك </a> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div class="modal fade" id="subsc-detail" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header py-3 px-4">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4">
+                                    <div class="row">
+                                        <div class="col-md-2 text-center p-1">
+                                            <div class="w-100 d-flex justify-content-center mb-2">
+                                                <img src="assets/images/Group 61.png" width="50px" alt="">
+                                            </div>
+                                            <p> الإشتراكات </p>
+                                        </div>
+                                        <div class="col-md-10 row p-1">
+                                            <div class="col-md-3 text-center p-1">
+                                                <h5 style="color: #3f0033;"> سعر الباقة </h5>
+                                                <p class="pt-2"> SR 225 </p>
+                                            </div>
+                                            <div class="col-md-3 text-center p-1">
+                                                <h5 style="color: #3f0033;"> تاريخ البداية </h5>
+                                                <p class="pt-2"> 02/8/2021 </p>
+                                            </div>
+                                            <div class="col-md-3 text-center p-1">
+                                                <h5 style="color: #3f0033;"> الوقت / اليوم </h5>
+                                                <p class="pt-2"> الاثنين / 5 مساءً </p>
+                                            </div>
+                                            <div class="col-md-3 text-center p-1">
+                                                <h5 style="color: #3f0033;"> المتبقي </h5>
+                                                <p class="pt-2"> 1 غسلة </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="wash-detail"> تفاصيل الغسلات </h3>
+                                    <div class="table-rep-plugin">
+                                        <div class="table-responsive mb-0 rounded" data-pattern="priority-columns">
+                                            <table id="tech-companies-1" class="table table-striped">
+                                                <thead>
+                                                    <tr class="mo-tr">
+                                                        <th> رقم الغسلة </th>
+                                                        <th> تاريخ الغسلة </th>
+                                                        <th> الوقت / اليوم </th>
+                                                        <th> حالة الغسلة </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>الغسلة 1</td>
+                                                        <td>02/8/2021</td>
+                                                        <td>الاثنين / 5 مساءً</td>
+                                                        <td> <i class="fas fa-check-circle pe-1"></i> تمت الخدمة </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>الغسلة 1</td>
+                                                        <td>02/8/2021</td>
+                                                        <td>الاثنين / 5 مساءً</td>
+                                                        <td> <i class="fas fa-check-circle pe-1"></i> تمت الخدمة </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>الغسلة 1</td>
+                                                        <td>02/8/2021</td>
+                                                        <td>الاثنين / 5 مساءً</td>
+                                                        <td> مجدولة </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="w-100 d-flex justify-content-end">
+                                        <button type="button" class="btn stoped "> طلب تأجيل موعد </button>
+                                        <button type="button" class="btn stoped  mx-2" data-bs-dismiss="modal"> إلغاء
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal-content-->
+                        </div>
+                        <!-- end modal dialog-->
+                    </div>
+                    <!-- modal -->
+                    <div class="modal fade" id="event-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header py-3 px-4">
+                                    <h5 class="modal-title" id="modal-title"> إضافة </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4">
+                                    <form class="needs-validation" name="event-form" id="form-event" novalidate>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label"> ملاحظة </label>
+                                                    <input class="form-control"  type="text" name="title"
+                                                        id="event-title" required value="">
+                                                    <div class="invalid-feedback">من فضلك أكتب المطلوب
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col-->
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label"></label>
+                                                    <select class="form-select" name="category" id="event-category">
+                                                        <optionn selected> --Select-- </optionn>
+                                                        <option>gift</option>
+                                                        <option>Monthly subscription </option>
+                                                        <option>Sterilization </option>
+                                                        <option>wash </option>
+                                                        <option>polishing </option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Please select a valid event
+                                                        category</div>
+                                                </div>
+                                            </div> <!-- end col-->
+                                        </div> <!-- end row-->
+                                        <div class="row mt-2">
+                                            <div class="col-6">
+                                                <!-- <button type="button" class="btn btn-danger"
+                                                    id="btn-delete-event">Delete</button> -->
+                                            </div>
+                                            <!-- end col-->
+                                            <div class="col-6 text-end">
+                                                <button type="button" class="btn btn-light me-1"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-success">
+                                                    Save
+                                                </button>
+                                            </div> <!-- end col-->
+                                        </div> <!-- end row-->
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end modal-content-->
+                        </div>
+                        <!-- end modal dialog-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <!-- apexcharts js -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <!-- jquery.vectormap map -->
+        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <!-- dropzone js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+        <!-- plugin js -->
+        <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/jquery-ui-dist/jquery-ui.min.js"></script>
+        <script src="assets/libs/@fullcalendar/core/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/bootstrap/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/daygrid/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/timegrid/main.min.js"></script>
+        <script src="assets/libs/@fullcalendar/interaction/main.min.js"></script>
+        <!-- Calendar init -->
+        <script src="assets/js/pages/calendar.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script>
+            $('#MainHeader').load('header.html');
+            $('#MainSidebar').load('sidebar.html');
+        </script>
+</body>
+</html>

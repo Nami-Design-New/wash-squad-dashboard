@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ar" style="direction: rtl;">
+<head>
+    <meta charset="utf-8" />
+    <title> WashSquad </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- jvectormap -->
+    <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-sidebar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <!-- ==========  Header  ========== -->
+        <section id="MainHeader"></section>
+        <!-- ==========  Sidebar  ========== -->
+        <section id="MainSidebar"></section>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <!-- breadcrumb -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item"> <a href="setting.html"> المستخدمين </a> </li>
+                        <li class="breadcrumb-item active"> <a href="#!"> جديد </a> </li>
+                    </ol>
+                    <button class="btn btn-dark" onclick="history.back()"> عودة </button>
+                </div>
+                <!-- end breadcrumb -->
+                <!-- edit Service -->
+                <section class="editService">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6 p-2">
+                                <div class="mb-4">
+                                    <label class="form-label"> اسم المستخدم </label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label"> كلمة المرور </label>
+                                    <input class="form-control" type="password">
+                                </div>
+                            </div>
+                            <div class="col-md-3 p-2">
+                                <div class="mb-3">
+                                    <label class="form-label"> الصورة </label>
+                                    <div action="#" class="dropzone" style="min-height: 150px">
+                                        <div class="fallback">
+                                            <input name="file" type="file">
+                                        </div>
+                                        <div class="dz-message needsclick">
+                                            <i class="display-6 mo-icon  fas fa-images"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="form-label mb-4"> صلاحيات الوصول </h5>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> الرئيسية</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> المبيعات </label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> الطلبات</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <!-- inner -->
+                            <div class="d-flex align-items-center ms-3 flex-wrap">
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="order1">
+                                    <label class="form-check-label" for="order1">
+                                        جدول الطلبات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="order2">
+                                    <label class="form-check-label" for="order2">
+                                        الأوقات المتاحة
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="order3">
+                                    <label class="form-check-label" for="order3">
+                                        الاشتراكات الشهرية
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="order4">
+                                    <label class="form-check-label" for="order4">
+                                        الخدمات المرسلة
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> التطبيقات</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> العمليات</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> السائقين</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> الشؤون المالية </label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <!-- inner -->
+                            <div class="d-flex align-items-center ms-3 flex-wrap">
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="reprot1">
+                                    <label class="form-check-label" for="reprot1">
+                                        بيانات الموظفين
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="reprot2">
+                                    <label class="form-check-label" for="reprot2">
+                                        الرواتب و العمولات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="reprot3">
+                                    <label class="form-check-label" for="reprot3">
+                                        مشتريات
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> التقارير المالية </label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <!-- inner -->
+                            <div class="d-flex align-items-center ms-3 flex-wrap">
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="money1">
+                                    <label class="form-check-label" for="money1">
+                                        تقارير الطلبات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="money2">
+                                    <label class="form-check-label" for="money2">
+                                        تقارير ايراد السيارات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="money3">
+                                    <label class="form-check-label" for="money3">
+                                        تقارير أداء السيارات
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> العملاء</label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> إعدادات التطبيق </label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <!-- inner -->
+                            <div class="d-flex align-items-center ms-3 flex-wrap">
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting1">
+                                    <label class="form-check-label" for="setting1">
+                                        الخدمات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting2">
+                                    <label class="form-check-label" for="setting2">
+                                        الخدمات الإضافية
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting3">
+                                    <label class="form-check-label" for="setting3">
+                                        المناطق و الاحياء
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting4">
+                                    <label class="form-check-label" for="setting4">
+                                        السائقين
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting5">
+                                    <label class="form-check-label" for="setting5">
+                                        الأوقات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting6">
+                                    <label class="form-check-label" for="setting6">
+                                        أحجام السيارات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting7">
+                                    <label class="form-check-label" for="setting7">
+                                        أنواع السيارات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting8">
+                                    <label class="form-check-label" for="setting8">
+                                        أنواع السيارات الفرعية
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting9">
+                                    <label class="form-check-label" for="setting9">
+                                        أكواد الخصم
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting10">
+                                    <label class="form-check-label" for="setting10">
+                                        طرق الدفع
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting11">
+                                    <label class="form-check-label" for="setting11">
+                                        العروض
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting12">
+                                    <label class="form-check-label" for="setting12">
+                                        الاشعارات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting13">
+                                    <label class="form-check-label" for="setting13">
+                                        الشروط و الأحكام
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting14">
+                                    <label class="form-check-label" for="setting14">
+                                        الأسئلة المتكررة
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting15">
+                                    <label class="form-check-label" for="setting15">
+                                        وسائل التواصل الاجتماعي
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="setting16">
+                                    <label class="form-check-label" for="setting16">
+                                        وسائل الدعم و المساعدة
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  checkbox -->
+                        <div class="d-flex align-items-center mb-4 ">
+                            <label class="form-label m-0" style="white-space: nowrap ;"> المتجر الالكتروني </label>
+                            <div class="form-check form-switch ms-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <!-- inner -->
+                            <div class="d-flex align-items-center ms-3 flex-wrap">
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="shop1">
+                                    <label class="form-check-label" for="shop1">
+                                        المنتجات
+                                    </label>
+                                </div>
+                                <div class="form-check mx-3 my-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="shop2">
+                                    <label class="form-check-label" for="shop2">
+                                        التصنيفات
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-content-center justify-content-end py-2">
+                            <button type="submit" class="btn orangeBtn px-5"> انشاء </button>
+                        </div>
+                    </form>
+                </section>
+                <!-- end edit Service -->
+            </div>
+        </div>
+        <!-- JAVASCRIPT -->
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <!-- apexcharts js -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <!-- dropzone js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+        <!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+        <!-- jquery.vectormap map -->
+        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script>
+            $('#MainHeader').load('header.html');
+            $('#MainSidebar').load('sidebar.html');
+        </script>
+</body>
+</html>
